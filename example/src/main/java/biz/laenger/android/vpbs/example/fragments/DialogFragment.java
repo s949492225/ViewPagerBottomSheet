@@ -3,13 +3,17 @@ package biz.laenger.android.vpbs.example.fragments;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.Toolbar;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.Toolbar;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
 
 import biz.laenger.android.vpbs.BottomSheetUtils;
 import biz.laenger.android.vpbs.ViewPagerBottomSheetDialogFragment;
@@ -19,9 +23,12 @@ import butterknife.ButterKnife;
 
 public class DialogFragment extends ViewPagerBottomSheetDialogFragment {
 
-    @BindView(R.id.bottom_sheet_toolbar) Toolbar bottomSheetToolbar;
-    @BindView(R.id.bottom_sheet_tabs) TabLayout bottomSheetTabLayout;
-    @BindView(R.id.bottom_sheet_viewpager) ViewPager bottomSheetViewPager;
+    @BindView(R.id.bottom_sheet_toolbar)
+    Toolbar bottomSheetToolbar;
+    @BindView(R.id.bottom_sheet_tabs)
+    TabLayout bottomSheetTabLayout;
+    @BindView(R.id.bottom_sheet_viewpager)
+    ViewPager bottomSheetViewPager;
 
     @SuppressLint("RestrictedApi")
     @Override
@@ -43,7 +50,7 @@ public class DialogFragment extends ViewPagerBottomSheetDialogFragment {
         BottomSheetUtils.setupViewPager(bottomSheetViewPager);
     }
 
-    static class SimplePagerAdapter extends android.support.v4.view.PagerAdapter {
+    static class SimplePagerAdapter extends PagerAdapter {
 
         private final Context context;
 
