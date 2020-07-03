@@ -1,6 +1,7 @@
 # ViewPagerBottomSheet
 
 Use ViewPagers in Bottom Sheets and Bottom Sheet Dialogs!
+**Migrated to AndroidX. Upgraded support version to 1.3.0-alpha01.**
 
 ## Example
 
